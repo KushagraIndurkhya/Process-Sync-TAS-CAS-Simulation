@@ -8,9 +8,6 @@
 using namespace std;
 atomic_flag lock = ATOMIC_FLAG_INIT;
 int k,t1,t2;
-
-// tuple<clock_t,string> 
-
 string currentDateTime()
 {
     time_t now = time(0);
@@ -20,7 +17,6 @@ string currentDateTime()
     strftime(buf, sizeof(buf), "%X", &tstruct);
 
     return buf;
-    // make_tuple(clock(),buf);
 }
 
 void testTS(int local_id)
